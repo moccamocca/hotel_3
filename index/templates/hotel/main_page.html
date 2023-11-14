@@ -1,0 +1,98 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/form_modal.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main_page.css' %}">
+{% endblock %}
+
+{% block js %}
+    <script src = "{% static 'js/form_modal.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+    {% if sent  %}
+        <!--показать модальное окно-->
+        <form action="" class="formModal">
+            <div id="idDivModal0">
+                <div id="idDivModal1">
+                    <h1>Бронирование успешно завершено!</h1>
+                    <p>На почту, указанную при бронировании, отправлено подтверждение.</p>
+                    <input type="submit" value="Отлично" id="idModalClose">
+                </div>
+            </div>
+        </form>
+    {% endif %}
+
+    <div id="main-content">
+        <div id="main_search">
+            <form method="get" id="form-search">  <!--данные передаются в url-параметрах-->
+                {% csrf_token %}
+                <div id="div-fields">
+                    {% for field in form.visible_fields %}
+                        <div class="div-field">
+                            <div class="div-field-input">
+                                <p class="field-input">{{ field }}</p>
+                            </div>
+                        </div>
+                    {% endfor %}
+                    <button type="submit">НАЙТИ НОМЕР</button>
+                </div>
+
+
+            </form>
+        </div>
+
+        <div id="main_info">
+            <p>В соответствии с законодательством, для регистрации по прибытии, требуются оригиналы документов, удостоверяющих личность, в том числе свидетельства о рождении детей.</p>
+        </div>
+
+        <div id="main_hello">
+            <div id="data">
+                <h1>Добро пожаловать!</h1>
+                <p>
+                    Команда TOP HOTEL PERM приветствует Вас на официальном сайте лучшего отеля в центре Перми.
+                </p>
+                <p>
+                    Отель TOP HOTEL PERM — место, в котором есть все для отдыха, деловой встречи, проведения конференции или свадьбы, проживания в уютных и роскошных номерах. Создатели TOP HOTEL PERM решили не просто построить современный и комфортабельный отель в центре города — они создали настоящую концепцию, в которой объединили русскую классику оформления номеров, высочайший уровень сервиса, международные стандарты и весь спектр услуг для комфортного ведения бизнеса и спокойного отдыха
+                </p>
+                <p>
+                    Каждый день мы стремимся к тому, чтобы Вы почувствовали, как хорошо здесь. Здесь и сейчас.
+                </p>
+                <p>
+                    Искренне Ваша, команда TOP HOTEL PERM.
+                </p>
+            </div>
+
+            <div id="contacts">
+                <div class="contact_wrapper">
+                    <div>
+                        <img src="{% static 'img/geo.png' %}" alt="" class="contacts_png">
+                    </div>
+
+                    <div class="contact-data">
+                        <h4>TOP HOTEL PERM</h4>
+                        <p>614039, Пермский край, Пермь</p>
+                        <p>ул. Швецова, 39</p>
+                    </div>
+                </div>
+
+                <div class="contact_wrapper">
+                    <div>
+                        <img src="{% static 'img/mes.png' %}" alt="" class="contacts_png">
+                    </div>
+
+                    <div class="contact-data">
+                        <h4>РЕСЕПШН</h4>
+                        <p>+7(342)520-23-18</p>
+                        <p><a href="mailto:info@hotel.ru">info@hotel.ru</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+
+

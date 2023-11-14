@@ -1,0 +1,62 @@
+#footer-all {
+    height: 600px;
+    background-color: #3e476a;
+    /*background: linear-gradient(#3e476a, 500px, #5b617c);*/
+    position: relative;
+    z-index: 100;
+}
+
+#footer-img {
+    display: block;
+    height: 250px;
+    width: 100%;
+    background-image: url("/static/img/perm_1.jpg");
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+}
+
+
+
+#map{
+    width: 500px;
+    height: 300px;
+}
+
+iframe {
+
+}
+
+a {
+    text-decoration: none; /* Убираем подчёркивание */
+}
+
+#footer-div {
+    height: 350px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid #4d4f53;
+    color: white;
+    box-shadow: -20px 0px 20px 18px #3e476a;
+}
+
+#footer-div p {
+    margin-bottom: 10px;
+}
+
+#footer-div a {
+    color: white;
+}
+
+#footer-div a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+#copyright {
+    text-align: center;
+    color: white;
+    background-color: #3e476a;
+}

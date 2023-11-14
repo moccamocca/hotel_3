@@ -1,0 +1,31 @@
+#faq-h1 {
+    text-align: center;
+    color: #081270;
+}
+
+#faq-list {
+    list-style-type: none;
+}
+
+/*li {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}*/
+
+.faq-link:hover {
+    font-weight: bold;
+}
+
+.faq-link {
+    border-bottom: 1px dotted black;
+    font-size: 20px;
+}
+
+.faq-item {
+
+}
+
+#faq-list li{
+    margin-bottom: 10px;
+}

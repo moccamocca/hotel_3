@@ -1,0 +1,75 @@
+#header-img {
+    display: block;
+    height: 250px;
+    width: 100%;
+    background-image: url("/static/img/perm_4.jpg");
+    background-size: cover;
+    background-position: center;
+    background-color: blue;
+}
+#header-img{
+    position: relative;
+    width: 100%;
+    height: 250px;
+ }
+
+
+   owl-theme
+
+   class="owl-carousel"
+
+
+   .container {
+    padding: 40px 0;
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+<!--        {{ form.non_field_errors }}-->
+
+<!--        {% for hidden_field in form.hidden_fields %}-->
+<!--            {{ hidden_field.errors }}-->
+<!--            {{ hidden_field }}-->
+        <!--                {{ field.help_text }}-->
+<!--        {% endfor %}-->
+
+
+
+
+            <!--Название номера-->
+            <h2>{{ room.name }}</h2>
+
+            <!--Цена-->
+            <p><b>{{ room.price }} руб/сутки</b></p>
+
+            <!--Вместимость-->
+            <p>до <b>{{ room.capacity }}</b> чел.</p>
+
+            {% if room.count_room == 1 %}
+                <p>Остался <b>{{ room.count_room }}</b> номер</p>
+            {% else %}
+                <p>Осталось <b>{{ room.count_room }}</b> номера(ов)</p>
+            {% endif %}
+
+            <!--Фото-->
+            <div>
+                {% for el in photos %}
+                    {% if el.room_id == room.id %}
+                        {% thumbnail el.photo "350x220" crop="center" as im %}
+                            <img src="{{ im.url }}" alt="Номер {{ room.name }}">
+                        {% endthumbnail %}
+                    {% endif %}
+                {% endfor %}
+            </div>
+
+            <!--Опции-->
+            <div>
+                <ul>
+                    {% for el in options %}
+                        {% if el.room_id == room.id %}
+                            <li>{{ el.option.name }}</li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>

@@ -1,0 +1,126 @@
+#idh2 {
+    color: black;
+    text-align: center;
+    padding: 5rem 0;
+    margin: 0;
+    font-style: italic;
+    font-weight: 300;
+}
+
+.item {
+    height: 250px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img_title{
+    margin: 0;
+}
+
+#owl-carousel-header {
+    margin-top: 81px;
+    z-index:0;
+}
+
+#top-header{
+    background-color: #040b48; /*#081270;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+}
+
+#top-header-contacts {
+    width: 250px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#top-header-contacts a:hover {
+    text-decoration: underline;
+}
+
+
+
+#top-header p{
+    color: white;
+}
+
+#top-header a{
+    color: white;
+}
+
+.menu-item {
+    font-size: 20px;
+}
+
+.menu-item a {
+    text-decoration: none; /* Убираем подчёркивание */
+    color: #081270;
+}
+
+.menu-item a:hover {
+      /*text-shadow:
+        1px 1px 2px black,
+        0 0 2em blue,
+        0 0 0.3em blue;
+      color: white;*/
+
+      color: #545a9b;
+}
+
+#top-menu-nav {
+    border-bottom: 1px solid grey;
+    background-color: white;
+    height: 40px;
+}
+
+#top-menu-ul {
+    height: 100%;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 100px;
+}
+
+#header-fixed {
+    width: 100%;
+    position: fixed;
+    margin: 0px;
+    top: 0;
+    z-index: 999;
+}
+
+#logo {
+    height: 36px;
+    width: 36px;
+}
+
+#top-header-logo {
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.owl-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 25%;
+    right: 25%;
+}
+
+
+
+
+

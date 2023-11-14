@@ -1,0 +1,85 @@
+* {
+    margin: 0px;
+}
+
+body{
+    position: relative;
+    font-family: 'Chloe', 'Times New Roman', Arial, sans-serif;
+}
+
+#popup-form {
+    position: fixed;
+    left: 10px;
+    top: 500px;
+    height: 150px;
+    width: 500px;
+    z-index: 999;      /* поверх всех элементов */
+    opacity: 1;
+    background-color: white;
+    box-shadow: 0px 0px 6px 2px #e99553;
+
+    display: none;  /* в form-interval.js менятеся на flex*/
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+
+
+    animation-name: animatemy;
+    animation-duration: 2s;  /* длительность */
+    animation-timing-function: ease-in-out ;
+}
+
+@keyframes animatemy {
+    from {left:-500px;}
+    to {left: 10px;}
+}
+
+#popup-booking {
+    margin-left: 20px;
+    margin-top: 20px;
+
+    display: block;
+    width: 300px;
+    height: 60px;
+    background-color: #d77527;
+    border-color: #d77527;
+    color: white;
+    font-weight: 600;
+    border: 0;
+}
+
+#popup-booking:hover {
+    background-color: #e99553;
+    border-color: #e99553;
+    transition: background-color 300ms ease 0ms;
+}
+
+#popup-form img {
+    height: 150px;
+    width: 150px;
+}
+
+#popup-form div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#popup-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    background-color: white;
+    color: #bdbdbd;
+}
+
+#popup-close:hover {
+    color: #6c6c6c;
+    transition: background-color 300ms ease 0ms;
+}
+
+
+
+
