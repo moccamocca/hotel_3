@@ -35,7 +35,8 @@ class Booking(models.Model):
     status = models.ForeignKey('StatusBooking',
                                on_delete=models.PROTECT,
                                verbose_name='Статус',
-                               default=StatusBooking.objects.get(pk=1).id)
+                               default=1 #StatusBooking.objects.get(pk=1).id
+                              )
     number_booking = models.CharField('Номер бронирования', max_length=50, unique=True, null=False)
 
     ds = models.DateTimeField('Дата создания', auto_now_add=True)
