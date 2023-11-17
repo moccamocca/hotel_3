@@ -95,16 +95,23 @@ WSGI_APPLICATION = 'hotel.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+#DATABASES = {
+#    "default": {
+#        "ENGINE": "mssql",
+#        "NAME": "hotel",
+#        "USER": "Orlova-M-Y",
+#        "PASSWORD": "25367",
+#        "HOST": "ALEXX-PC\SQLEXPRESS",
+#        "OPTIONS": {"driver": "SQL Server Native Client 11.0",
+#                    },
+#    },
+#}
+
 DATABASES = {
-    "default": {
-        "ENGINE": "mssql",
-        "NAME": "hotel",
-        "USER": "Orlova-M-Y",
-        "PASSWORD": "25367",
-        "HOST": "ALEXX-PC\SQLEXPRESS",
-        "OPTIONS": {"driver": "SQL Server Native Client 11.0",
-                    },
-    },
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
 
 
